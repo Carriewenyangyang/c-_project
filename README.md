@@ -40,7 +40,157 @@ I. Identifiers
 	d. In no case can they begin with a digit.
 
 2. The standard reserved 56 keywords to identify operations and data descriptions are :
-	（1）
+	(1)alignas: Keyword specifying alignment.
+	(2)alignof: Keyword obtaining alignment of a type.
+	(3)and, and_eq, not, not_eq, or, or_eq, xor, xor_eq: Bitwise and logical operators.
+	(4)asm: Keyword for inline assembly statements.
+	(5)auto: Keyword for type deduction, used to automatically infer the type of variables.
+	(6)bool: Boolean type.
+	(7)break: Keyword to interrupt the execution of a loop or switch statement.
+	(8)case: Branch in a switch statement.
+	(9)catch: Keyword for exception handling.
+	(10)char, char16_t, char32_t : Character types.
+	(11)class, struct, union: Keywords for defining classes, structures, and unions.
+	(12)const, constexpr: Keywords for defining constants.
+	(13)const_cast: Keyword for type casting, used to remove const qualifier.
+	(14)continue: Keyword to continue to the next iteration of a loop.
+	(15)decltype: Keyword for obtaining the type of an expression.
+	(16)default: Default branch in a switch statement.
+	(17)delete: Keyword for deleting dynamically allocated objects.
+	(18)do, while: Loop statements.
+	(19)double, float: Floating-point types.
+	(20)dynamic_cast: Keyword for type casting, used for dynamic type casting.
+	(21)else, if: conditional statements.
+	(22)enum: Keyword for enum types.
+	(23)explicit: Keyword for explicit constructors.
+	(24)export: Keyword for exporting template definitions.
+	(25)extern: Keyword for declaring external variables and functions.
+	(26)false, true: Boolean literals.
+	(27)for: Loop statment.
+	(28)friend: Keyword for friend functions and classes.
+	(29)goto: Keyword for unconditional jump.
+	(30)inline: Keyword for inline functions.
+	(31)int, long, short: Integer types.
+	(32)mutable: Keyword for mutable data members.
+	(33)namespace: Keyword for defining namespaces.
+	(34)new: Keyword for dynamic memory allocation.
+	(35)noexcept: Keyword for specifying functions that won't throw exceptions.
+	(36)operator: Keyword for operator overloading.
+	(37)private, protected, public: Access control keywords.
+	(38)register: Keyword for register variables (deprecated).
+	(39)reinterpret_cast: Keyword for type casting, used to reinterpret types.
+	(40)return: Keyword for returning values from functions.
+	(41)sizeof: Keyword for obtaining the size of objects.
+	(42)static, thread_local: Keywords for static storage duration.
+	(43)static_assert: Keyword for static assertions.
+	(44)static_cast: Keyword for type casting, used for static type casting.
+	(45)switch: Keyword for switch statements.
+	(46)template: Keyword for template definitions.
+	(47)this: Keyword for the pointer to the current object.
+	(48)throw, try: Keywords for exception handling.
+	(49)typeid: Keyword for obtaining type information.
+	(50)typename: Keyword for type paramenters in templates.
+	(51)using: Keyword for namespace importing and type aliasing.
+	(52)virtual: Keyword for virtual functions.
+	(53)void: Keyword for void type.
+	(54)volatile: Keyword for volatile qualifier.
+	(55)wchar_t: Wide character type.
+	(56)while: Loop statement.
+
+II. Fundamental data types
+
+1. Fundamental data types are mainly classified into 4 classes: Character types, Numerical integer types, Floating-point types, Boolean type.
+
+Group			Type names*			Notes on size/precision
+----------------------------------------------------------------------------------------------------------
+			char				Exactly one byte in size. At least 8 bits.
+			char16_t			Not smaller than char. At least 16 bits.
+Character types		char32_t			Not smaller than char16_t. At least 32 bits.
+			wchar_t				Can represent the largest supported character set.
+----------------------------------------------------------------------------------------------------------
+			signed char			Same size as char. At least 8 bits.
+			*signed* short *int*		Not smaller than char. At least 16 bits.
+Integer types(signed)	*signed* int			Not smaller than short. At least 16 bits.
+			*signed* long *int*			Not smaller than int. At least 32 bits.
+			*signed* long long *int*		Not smaller than long. At least 64 bits.
+----------------------------------------------------------------------------------------------------------
+			unsigned char			
+			unsigned short *int*
+Integer types(unsigned)	unsigned *int*			(For all, same size as their signed counterparts)
+			unsigned long *int*
+			unsigned long long *int*
+----------------------------------------------------------------------------------------------------------
+			float				
+Floating-point types	double				Precision not less than float
+			long double			Precision not less than double
+----------------------------------------------------------------------------------------------------------
+Boolean type		bool
+----------------------------------------------------------------------------------------------------------
+Void type		void				no storage
+----------------------------------------------------------------------------------------------------------
+Null pointer		decltype(nullptr)		
+----------------------------------------------------------------------------------------------------------
+
+(1)Names of certain integer types can be abbreviated without their signed and int components, the part with stars is optional. I.e., signed short int can be abbreviated as signed short, short int, or simply short.
+
+(2)the difference between types in each group is only their size (i.e., how much they occupy in memory).
+
+(3)Other than char (which has a size of exactly one byte), none of the fundamental types has a standard size specific (but a minimum size).
+
+Type size are expressed in bits; the more bits a type has, the more distinct values it can represent and consumes more space in memory.
+
+-------------------------------------------------------------------------
+Size 	Unique representable values	Notes
+-------------------------------------------------------------------------
+8-bit	256				=2^8
+-------------------------------------------------------------------------
+16-bit	65,536				=2^16
+-------------------------------------------------------------------------
+32-bit	4,294,967,296			=2^32(~4 billion)
+-------------------------------------------------------------------------
+64-bit  18,446,744,073,709,551,616	=2^64(~18 billion billion)
+-------------------------------------------------------------------------
+
+(4)The range of positive values is approximately halved in signed types compared to unsigned types, due to the fact that one of the 16 bits is used for the sign.
+
+(5)For floating-point types, the size affects their precision, by having more or less bits for their significant and exponent.
+
+(6)If the size or precision of the type is not a concern, then char->characters, int->integer, double->floating-point values
+
+(7)void : identifies the lack of type; nullptr: a special type of pointer.
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
