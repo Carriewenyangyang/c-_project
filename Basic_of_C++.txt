@@ -160,12 +160,27 @@ Size 	Unique representable values	Notes
 (7)void : identifies the lack of type; nullptr: a special type of pointer.
 
 
-		
+C. Constant		
 
+I. Literals
+1. Integer Numberals-- decimal, octal, hexadecimal
+2. Floating Point Numberals -- a decimal point and/or e + "by ten at the 4th height"
+3. Character and string literals
+\n	newline
+\r	carriage return
+\t 	tab
+\v	vertical tab
+\b 	backspace
+\f 	form feed(page feed)
+\a	alert(beep)
+\'	single quote(')
+\"	double quote(")
+\?	question mark(?)
+\\	backslash(\)
 
-
-
-
+4. Other literals
+1. True, false
+2. Nullptr -- null pointer
 
 
 
